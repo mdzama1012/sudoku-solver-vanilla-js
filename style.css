@@ -6,7 +6,7 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -14,19 +14,19 @@ header {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 }
 
 header h1 {
-	font-weight: 300;
+	font-weight: 600;
 	margin-left: 20px;
+	font-size: 24px;
 }
 
 .container {
 	display: flex;
-	align-content: start;
 	flex-direction: column;
-	max-width: 500px;
+	max-width: 80%;
 	margin: 30px auto;
 	padding: 20px;
 }
@@ -36,36 +36,43 @@ header h1 {
 	display: flex;
 	flex-direction: column;
 }
+
 .row {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-/* Apply border to all cell */
+/* Apply border to all cells */
 .col {
 	border-top: 1.5px solid rgb(80, 80, 80);
 	border-left: 1.5px solid rgb(80, 80, 80);
 }
+
 /* Vertically sub-grid */
 .row .col:nth-child(1) {
 	border-left: 2px solid;
 }
+
 .row .col:nth-child(3n) {
 	border-right: 2px solid black;
 }
+
 /* Horizontal sub-grid */
 .row:nth-child(1) .col {
 	border-top: 2px solid black;
 }
+
 .row:nth-child(3n) .col {
 	border-bottom: 2px solid black;
 }
-/* remove double border */
+
+/* Remove double border */
 .row:nth-child(4) .col,
 .row:nth-child(7) .col {
 	border-top: none;
 }
+
 .row .col:nth-child(4),
 .row .col:nth-child(7) {
 	border-left: none;
@@ -77,34 +84,39 @@ header h1 {
 	-webkit-appearance: none;
 	margin: 0;
 }
+
 .col input:hover {
 	cursor: pointer;
 	background-color: rgb(225, 240, 255);
 }
+
 .col input:focus {
 	outline: none;
 	background-color: rgb(200, 225, 250);
 }
 
 .col input {
-	width: 45px;
-	height: 45px;
-	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 1.5rem;
 	text-align: center;
 	caret-color: transparent;
 	outline: none;
 	border: none;
 }
 
+/* Button styling */
 .btn-ctrl {
-	margin-top: 25px;
+	margin-top: 20px;
 }
 
 .btn {
-	color: #fff;
 	border: none;
+	outline: none;
+	color: white;
 	border-radius: 5px;
-	padding: 10px 20px;
+	padding: 12px 30px;
+	font-size: 16px;
 	cursor: pointer;
 }
 
@@ -114,4 +126,34 @@ header h1 {
 
 .reset-btn {
 	background-color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.container {
+		max-width: 95%;
+		padding: 10px;
+	}
+
+	/* Adjust input size for smaller screens */
+	.col input {
+		width: 30px;
+		height: 30px;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	/* Adjust input size for very small screens */
+	.col input {
+		width: 25px;
+		height: 25px;
+		font-size: 0.9rem;
+	}
+
+	/* Adjust button size */
+	.btn {
+		padding: 8px 15px;
+		font-size: 14px;
+	}
 }
