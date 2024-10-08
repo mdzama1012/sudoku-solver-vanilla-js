@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+header h1 {
+	font-weight: 300;
+	margin-left: 20px;
+}
+
+.container {
+	display: flex;
+	align-content: start;
+	flex-direction: column;
+	max-width: 500px;
+	margin: 30px auto;
+	padding: 20px;
+}
+
+/* Make grid structure */
+#grid {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* Apply border to all cell */
+.col {
+	border-top: 1.5px solid rgb(80, 80, 80);
+	border-left: 1.5px solid rgb(80, 80, 80);
+}
+/* Vertically sub-grid */
+.row .col:nth-child(1) {
+	border-left: 2px solid;
+}
+.row .col:nth-child(3n) {
+	border-right: 2px solid black;
+}
+/* Horizontal sub-grid */
+.row:nth-child(1) .col {
+	border-top: 2px solid black;
+}
+.row:nth-child(3n) .col {
+	border-bottom: 2px solid black;
+}
+/* remove double border */
+.row:nth-child(4) .col,
+.row:nth-child(7) .col {
+	border-top: none;
+}
+.row .col:nth-child(4),
+.row .col:nth-child(7) {
+	border-left: none;
+}
+
+/* Cell interactivity */
+.col input::-webkit-outer-spin-button,
+.col input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.col input:hover {
+	cursor: pointer;
+	background-color: rgb(225, 240, 255);
+}
+.col input:focus {
+	outline: none;
+	background-color: rgb(200, 225, 250);
+}
+
+.col input {
+	width: 45px;
+	height: 45px;
+	font-size: 20px;
+	text-align: center;
+	caret-color: transparent;
+	outline: none;
+	border: none;
+}
+
+.btn-ctrl {
+	margin-top: 25px;
+}
+
+.btn {
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.solve-btn {
+	background-color: #12a80d;
+}
+
+.reset-btn {
+	background-color: #444;
+}

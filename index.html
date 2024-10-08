@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Sudoku Solver</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<img src="img/sudoku.png" alt="logo not found" width="65" />
+				<h1>Sudoku Solver</h1>
+			</header>
+			<form id="grid">
+				<div class="row">
+					<div class="col">
+						<input type="number" name="11" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="12" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="13" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="14" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="15" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="16" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="17" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="18" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="19" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="21" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="22" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="23" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="24" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="25" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="26" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="27" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="28" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="29" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="31" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="32" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="33" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="34" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="35" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="36" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="37" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="38" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="39" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="41" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="42" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="43" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="44" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="45" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="46" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="47" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="48" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="49" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="51" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="52" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="53" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="54" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="55" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="56" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="57" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="58" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="59" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="61" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="62" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="63" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="64" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="65" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="66" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="67" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="68" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="69" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="71" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="72" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="73" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="74" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="75" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="76" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="77" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="78" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="79" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="81" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="82" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="83" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="84" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="85" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="86" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="87" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="88" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="89" class="cell" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="number" name="91" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="92" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="93" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="94" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="95" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="96" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="97" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="98" class="cell" />
+					</div>
+					<div class="col">
+						<input type="number" name="99" class="cell" />
+					</div>
+				</div>
+				<div class="btn-ctrl">
+					<button type="submit" class="btn solve-btn">
+						<i class="fa-solid fa-flask"></i> Solution
+					</button>
+					<button type="reset" class="btn reset-btn">
+						<i class="fa-solid fa-rotate-right"></i> Reset
+					</button>
+				</div>
+			</form>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
