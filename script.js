@@ -16,7 +16,7 @@ function fillGrid() {
 					: '';
 			} else {
 				if (!cell.firstElementChild.value) {
-					cell.firstElementChild.style.color = 'red';
+					cell.firstElementChild.style.color = '#EF5A6F';
 				}
 				cell.firstElementChild.value = solvedGrid[row - 1][col - 1];
 			}
@@ -33,7 +33,7 @@ function setSolvedMode() {
 function resetState() {
 	document
 		.querySelectorAll('input')
-		.forEach(input => (input.style.color = 'blue'));
+		.forEach(input => (input.style.color = '#4379F2'));
 	if (isSolvedMode) {
 		isSolvedMode = false;
 		const solveButton = document.querySelector('.solve-btn');
@@ -130,6 +130,6 @@ function solveSudoku(event) {
 	isSolvedMode = true;
 }
 
-gridElement.addEventListener('submit', solveSudoku);
 gridElement.addEventListener('reset', resetState);
+gridElement.addEventListener('submit', solveSudoku);
 document.addEventListener('DOMContentLoaded', resetState);

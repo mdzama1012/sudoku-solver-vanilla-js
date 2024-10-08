@@ -45,26 +45,26 @@ header h1 {
 
 /* Apply border to all cells */
 .col {
-	border-top: 1.5px solid rgb(80, 80, 80);
-	border-left: 1.5px solid rgb(80, 80, 80);
+	border-top: 1.25px solid #171717;
+	border-left: 1.25px solid #171717;
 }
 
 /* Vertically sub-grid */
 .row .col:nth-child(1) {
-	border-left: 2px solid;
+	border-left: 2px solid #171717;
 }
 
 .row .col:nth-child(3n) {
-	border-right: 2px solid black;
+	border-right: 2px solid #171717;
 }
 
 /* Horizontal sub-grid */
 .row:nth-child(1) .col {
-	border-top: 2px solid black;
+	border-top: 2px solid #171717;
 }
 
 .row:nth-child(3n) .col {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #171717;
 }
 
 /* Remove double border */
@@ -87,12 +87,11 @@ header h1 {
 
 .col input:hover {
 	cursor: pointer;
-	background-color: rgb(225, 240, 255);
 }
 
 .col input:focus {
 	outline: none;
-	background-color: rgb(200, 225, 250);
+	background-color: #dbe4ff;
 }
 
 .col input {
@@ -103,6 +102,7 @@ header h1 {
 	caret-color: transparent;
 	outline: none;
 	border: none;
+	background-color: #fff;
 }
 
 /* Button styling */
