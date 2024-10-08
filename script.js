@@ -87,7 +87,34 @@ function solveSudokuBacktracking(row, col) {
 	return false;
 }
 
+const isValid = (row, col) => {
+	const targetNum = grid[row][col];
+	if (targetNum === 0) return true;
+	for (let r = row - 1; r >= 0; r--) {
+		if (grid[r][col] === targetNum) return false;
+	}
+	for (let c = col - 1; c >= 0; c--) {
+		if (grid[row][c] === targetNum) return false;
+	}
+	let subRow = Math.floor(row / 3) * 3;
+	let subCol = Math.floor(col / 3) * 3;
+	for (let r = subRow; r < subRow + 3; r++) {
+		for (let c = subCol; c < subCol + 3; c++)
+			if (row !== r && col !== c && grid[r][c] === targetNum) return false;
+	}
+	return true;
+};
+
 function isValidSudoku() {
+	for (let row = 0; row < 9; row++) {
+		for (let col = 0; col < 9; col++)
+			if (
+				unSolvedGrid[row][col] < 0 ||
+				grid[row][col] > 9 ||
+				!isValid(row, col)
+			)
+				return false;
+	}
 	return true;
 }
 
