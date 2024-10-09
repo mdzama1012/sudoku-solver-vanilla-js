@@ -4,8 +4,8 @@ This is a simple web-based Sudoku solver that allows users to input a Sudoku puz
 
 ## User Interface Screenshot
 
-<img src="img/sudoku-screeshot-solved.png" alt="screenshot" width="300px" />
-<img src="img/sudoku-screenshot.png" alt="screenshot" width="300px" />
+<img src="img/sudoku-screeshot-solved.png" alt="screenshot" width="250px" height="300px" />
+<img src="img/sudoku-screenshot.png" alt="screenshot" width="250px" height="300px/>
 
 ## Features
 
