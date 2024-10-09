@@ -2,6 +2,11 @@
 
 This is a simple web-based Sudoku solver that allows users to input a Sudoku puzzle and solve it in real-time. The project is built with **HTML**, **CSS**, and **JavaScript** using a **backtracking algorithm** for solving the puzzle. The goal of this project is to provide a clean, intuitive interface where users can interactively input a Sudoku puzzle, solve it, or reset the grid.
 
+## User Interface Screenshot
+
+<img src="img/sudoku-screeshot-solved.png" alt="screenshot" width="300px" />
+<img src="img/sudoku-screenshot.png" alt="screenshot" width="300px" />
+
 ## Features
 
 - **Interactive Sudoku Grid**: Users can input their Sudoku puzzle directly into the grid.
