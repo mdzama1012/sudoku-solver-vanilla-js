@@ -35,7 +35,8 @@ function setSolvedMode() {
 
 // reset solvedGrid and unSolvedGrid.
 function setGrids() {
-	solvedGrid = unSolvedGrid = Array.from({ length: 9 }, () => Array(9).fill(0));
+	solvedGrid = Array.from({ length: 9 }, () => Array(9).fill(0));
+	unSolvedGrid = Array.from({ length: 9 }, () => Array(9).fill(0));
 }
 
 // reset the UI and sudoku table.
@@ -148,7 +149,15 @@ function solveSudoku(event) {
 	// console.log(solvedGrid);
 	// console.log(unSolvedGrid);
 	if (!isValidSudoku()) {
-		alert('Please Enter Valid Sudoku!');
+		alert(`
+			Invalid Sudoku! Please check the following rules:
+
+			1. Each row must contain the numbers 1-9 without repetition.
+			2. Each column must contain the numbers 1-9 without repetition.
+			3. Each 3x3 sub-grid must contain the numbers 1-9 without repetition.
+
+			Ensure that no number violates these rules and try again.
+	`);
 		return;
 	}
 	if (!solveSudokuBacktracking(0, 0)) {
